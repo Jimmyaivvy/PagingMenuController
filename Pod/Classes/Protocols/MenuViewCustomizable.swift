@@ -21,6 +21,8 @@ public protocol MenuViewCustomizable {
     var menuPosition: MenuPosition { get }
     var dividerImage: UIImage? { get }
     var itemsOptions: [MenuItemViewCustomizable] { get }
+    var scrollEnabled: Bool { get }
+    var tapEnabled: Bool { get }
 }
 
 public extension MenuViewCustomizable {
@@ -56,6 +58,12 @@ public extension MenuViewCustomizable {
     }
     var dividerImage: UIImage? {
         return nil
+    }
+    var scrollEnabled: Bool {
+        return true
+    }
+    var tapEnabled: Bool {
+        return true
     }
 }
 

@@ -194,8 +194,12 @@ public class PagingMenuController: UIViewController, PagingValidator {
         
         menuView = MenuView(menuOptions: menuOptions)
         
-        addTapGestureHandler()
-        addSwipeGestureHandler()
+        if menuOptions.tapEnabled {
+            addTapGestureHandler()
+        }
+        if menuOptions.scrollEnabled {
+            addSwipeGestureHandler()
+        }
     }
     
     private func layoutMenuView() {
